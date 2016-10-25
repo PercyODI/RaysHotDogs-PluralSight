@@ -16,7 +16,7 @@ using RaysHotDogs.Utility;
 
 namespace RaysHotDogs
 {
-    [Activity(Label = "Hot dog detail", MainLauncher = true)]
+    [Activity(Label = "Hot dog detail")]
     public class HotDogDetailActivity : Activity
     {
         private ImageView hotDogImageView;
@@ -37,7 +37,7 @@ namespace RaysHotDogs
 
             SetContentView(Resource.Layout.HotDogDetailView);
 
-            HotDogDataService dataService = new HotDogDataService();
+            dataService = new HotDogDataService();
             selectedHotDog = dataService.GetHotDogById(1);
 
             // Create your application here
